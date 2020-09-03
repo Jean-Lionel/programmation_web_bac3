@@ -1,0 +1,160 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 20px;
+
+}
+
+body{
+	margin:0;/*
+	background: #49505*/;
+
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+.navigation
+{
+
+	position: fixed;
+	top: 0;
+	width: 60px;
+	height: 100%;
+	background: #3e0748;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+.navigation:hover,.navigation.active
+{
+	width: 300px;
+}
+
+.navigation ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.navigation ul li
+{
+	position: relative;
+	width: 100%;
+	list-style: none;
+}
+
+.navigation ul li a
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+	color: #fff; 
+}
+
+.navigation ul li:hover
+{
+	background: #ea1d63;
+}
+
+.navigation ul li a .icon
+{
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.navigation ul li a .icon .fa
+{
+	font-size: 24px;
+}
+
+.navigation ul li a .title
+{
+	position: relative;
+	display: block;
+	padding: 0 10px;
+	height: 60px;
+	line-height: 60px;
+	text-align: start;
+	white-space: nowrap;
+
+}
+
+.toggle
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	background: #330748;
+	cursor: pointer;
+}
+
+.toggle:hove{
+	background: #ea1d63;
+}
+
+.toggle:before
+{
+	content:"📄";
+	font-family: fontAwesome;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 60px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.toggle.active:before
+{
+	content:"💥";
+	background: #123;
+}
+
+
+
+
+
+.section{
+	padding-left: 80px; 
+	margin-right: 20px;
+	transition: all .5s;
+}
+
+@media (max-width: 767)
+{
+	.navigation
+	{
+		left: -60px;
+	}
+
+	.navigation.active
+	{
+		left: 0px;
+		width: 100%;
+	}
+}
+
+/*.h-titre{
+	
+	background: yellow;
+}*/
+
+/*.info-client{
+	text-align: right;
+	font-style: bold;
+	font-size: 20px;
+	background: red;
+}*/

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Responsive side bar</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- <div>
+		<h1>Total cleaning</h1>
+	</div> -->
+	<div class="navigation" onhover="toggleMenu()">
+		<ul>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-home"></i></span>
+					<span class="title">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-user"></i></span>
+					<span class="title">Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-comments"></i></span>
+					<span class="title">Messages</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-question-circle"></i></span>
+					<span class="title">Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-cogs"></i></i></span>
+					<span class="title">Setting</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-lock"></i></span>
+					<span class="title">Password</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-sign-out"></i></span>
+					<span class="title">Sign out</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="toggle" onclick="toggleMenu()">
+		
+	</div>
+
+	<div class="section">
+		<header>
+			<h1 class="text-capitalize text-center">Mini Bank</h1>
+		</header>
+
+
+		<div class="container-fluid">
+
+		contenu principal
+		</div>
+	</div>
+
+
+
+	<script>
+	let navigation = document.querySelector('.navigation')
+	let toggle = document.querySelector('.toggle')
+	let section = document.querySelector('.section')
+	let isActive;
+
+	function toggleMenu(){
+		
+		navigation.classList.toggle('active')
+		isActive = toggle.classList.toggle('active')
+
+		if(isActive){
+			section.style.paddingLeft  = '300px'
+			
+		}else{
+			section.style.paddingLeft  = '80px'
+		}
+
+
+	}
+
+	navigation.addEventListener('mouseover',()=>{
+		if(!isActive)
+			section.style.paddingLeft  = '300px'
+	})
+
+	navigation.addEventListener('mouseout',()=>{
+		if(!isActive)
+			section.style.paddingLeft  = '80px'
+	})
+
+
+	</script>
+
+	
+</body>
+</html>
